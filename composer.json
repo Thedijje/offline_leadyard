@@ -8,5 +8,7 @@
             "email": "Dheeraj@thedijje.com"
         }
     ],
-    "require": {}
+    "require": {
+		"thedijje/ci_start":"dev-master"
+	}
 }
