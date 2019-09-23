@@ -1,5 +1,29 @@
 <?php
 /**
+ * 
+ * Custom configuration
+ * Author: Dheeraj jha
+ * Email: Dheeraj@thedijje.com
+ * Web: thedijje.com
+ * 
+ *  */
+
+if(!file_exists('ini.php')){
+    
+    die('Configuration file missing, check your settings');
+    
+}
+
+require('ini.php');
+
+
+		define('DB_GROUP', env('database_group'));
+        define('BASE_URL', env('BASE_URL'));
+        $app_dir = env('APP_DIR');
+        define('APP_V', env('APP_V'));
+        define('ENV', env('ENV'));
+
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -53,7 +77,7 @@
  *
  * NOTE: If you change these, also change the error_reporting() code below
  */
-	define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : 'development');
+	define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : ENV);
 
 /*
  *---------------------------------------------------------------
@@ -114,7 +138,7 @@ switch (ENVIRONMENT)
  *
  * NO TRAILING SLASH!
  */
-	$application_folder = 'application';
+	$application_folder = $app_dir;
 
 /*
  *---------------------------------------------------------------
