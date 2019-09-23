@@ -10,6 +10,6 @@
         }
     ],
     "require": {
-		"thedijje/ci_start":"dev-master"
+		
 	}
 }
