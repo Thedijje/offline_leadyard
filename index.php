@@ -1,5 +1,30 @@
 <?php
 /**
+ * 
+ * Custom configuration
+ * Author: Dheeraj jha
+ * Email: Dheeraj@thedijje.com
+ * Web: thedijje.com
+ * 
+ *  */
+
+if(!file_exists('ini.php')){
+    
+    die('Configuration file missing, check your settings');
+    
+}
+
+require('ini.php');
+
+
+		define('DB_GROUP', env('database_group'));
+
+        define('BASE_URL', env('BASE_URL'));
+        $app_dir = env('APP_DIR');
+        define('APP_V', env(APP_V));
+        define('ENV', env('ENV'));
+
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
