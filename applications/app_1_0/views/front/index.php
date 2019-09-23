@@ -60,11 +60,10 @@
             <li>Edit default route from <code>Home</code></li>
             <li>Copy <code>.ENV_example</code> to <code>.ENV</code> and update value as required</li>
             <li>Application directory location at <code>applications/app_1_0</code>, you can change so in <code>.ENV</code> file</li>
+            <li>Used frontend libraries are <code>Fontawesome 5</code>, <code>Bootstrap 4</code>, <code>jQuery</code></li>
           </ul>
-          
 
-
-        </div>
+          </div>
       </div>
     </div>
   </div>
