@@ -21,7 +21,7 @@ require('ini.php');
 
         define('BASE_URL', env('BASE_URL'));
         $app_dir = env('APP_DIR');
-        define('APP_V', env(APP_V));
+        define('APP_V', env('APP_V'));
         define('ENV', env('ENV'));
 
 /**
@@ -78,7 +78,7 @@ require('ini.php');
  *
  * NOTE: If you change these, also change the error_reporting() code below
  */
-	define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : 'development');
+	define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : ENV);
 
 /*
  *---------------------------------------------------------------
@@ -139,7 +139,7 @@ switch (ENVIRONMENT)
  *
  * NO TRAILING SLASH!
  */
-	$application_folder = 'application';
+	$application_folder = $app_dir;
 
 /*
  *---------------------------------------------------------------
