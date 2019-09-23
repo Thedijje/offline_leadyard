@@ -18,7 +18,6 @@ require('ini.php');
 
 
 		define('DB_GROUP', env('database_group'));
-
         define('BASE_URL', env('BASE_URL'));
         $app_dir = env('APP_DIR');
         define('APP_V', env('APP_V'));
