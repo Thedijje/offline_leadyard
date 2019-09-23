@@ -1,7 +1,8 @@
 {
     "name": "thedijje/ci_start",
     "description": "Codeigniter 3 boilerplate for quick start your development",
-    "type": "project",
+	"type": "project",
+	"license": "MIT",
     "authors": [
         {
             "name": "Dheeraj",
