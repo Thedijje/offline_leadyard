@@ -1,0 +1,27 @@
+#!/bin/bash
+
+ENV=.ENV
+
+
+if [ -f "$ENV" ]
+    then
+    echo ".ENV file already exists, please use it to put configuration, or delete it before running this command"
+else
+    cp .ENV_example .ENV
+fi
+
+
+echo "Welcome to codeigniter boilerplate"
+
+echo "Please wait while we setting up project"
+
+
+
+
+mkdir -p -m777 writable/logs
+mkdir -p -m777 writable/session
+
+sleep 1
+
+
+echo "Setup complete, please open .ENV file and edit details accordingly"

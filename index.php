@@ -8,13 +8,7 @@
  * 
  *  */
 
-if(!file_exists('ini.php')){
-    
-    die('Configuration file missing, check your settings');
-    
-}
-
-require('ini.php');
+		require('config/ini.php');
 
 
 		define('DB_GROUP', env('database_group'));
@@ -121,7 +115,7 @@ switch (ENVIRONMENT)
  * This variable must contain the name of your "system" directory.
  * Set the path if it is not in the same directory as this file.
  */
-	$system_path = 'system';
+	$system_path = 'vendor/codeigniter/framework/system';
 
 /*
  *---------------------------------------------------------------
