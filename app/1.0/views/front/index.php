@@ -13,6 +13,7 @@
   <!-- Bootstrap core CSS -->
   <link href="<?php echo base_url('public/front/css/bootstrap.min.css')?>" rel="stylesheet">
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="shortcut icon" href="https://codeigniter.com/assets/images/tl-ci.gif" type="image/x-icon">
 
 </head>
 
@@ -34,7 +35,7 @@
           </li>
           
           <li class="nav-item">
-            <a class="nav-link" href="https://github.com/thedijje/ci_boilerplate">Learn more</a>
+            <a class="nav-link" href="https://github.com/Thedijje/ci_boilerplate/blob/master/README.md">Learn more</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="https://twitter.com/@thedijje">Contact</a>
