@@ -1,0 +1,9 @@
+#!/bin/bash
+
+serve_url=localhost:8585
+
+php -S $serve_url > /dev/null 2>/dev/null &
+
+process_id=$(pgrep php)
+
+echo "Server started at $serve_url, to stop issue 'kill $process_id'";

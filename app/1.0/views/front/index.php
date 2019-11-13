@@ -12,7 +12,7 @@
 
   <!-- Bootstrap core CSS -->
   <link href="<?php echo base_url('public/front/css/bootstrap.min.css')?>" rel="stylesheet">
-  <link href="<?php echo base_url('public/front/css/fontawesome.min.css')?>" rel="stylesheet">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
 </head>
 
@@ -21,7 +21,7 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
     <div class="container">
-      <a class="navbar-brand" href="#">CI Boilerplate</a>
+      <a class="navbar-brand" href="<?php echo base_url()?>">CI Boilerplate</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -48,10 +48,10 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-12 text-center">
-        <h1 class="mt-5">Codeigniter 3</h1>
-        <p class="lead">Learn more about boilerplate, installation and setuo!</p>
+        <h1 class="mt-5"><i class="fa fa-fire"></i> Codeigniter 3</h1>
+        <p class="lead">Learn more about boilerplate, installation and setup!</p>
         <p>
-          <a href="https://github.com/thedijje/ci_boilerplate" target="_blank"><button class="btn btn-primary">View on github</button></a>
+          <a href="https://github.com/thedijje/ci_boilerplate" target="_blank"><button class="btn btn-primary"><i class="fa fa-github-alt"></i> View on github</button></a>
         </p>
         
         <div class="text-center">
@@ -60,7 +60,7 @@
             <li>Edit default route from <code>Home</code></li>
             <li>Copy <code>.ENV_example</code> to <code>.ENV</code> and update value as required</li>
             <li>Application directory location at <code><?php echo env('APP_DIR')?></code>, you can change so in <code>.ENV</code> file</li>
-            <li>Used frontend libraries are <code>Fontawesome 5</code>, <code>Bootstrap 4</code>, <code>jQuery</code></li>
+            <li>Used frontend libraries are <code>Fontawesome 4</code>, <code>Bootstrap 4</code>, <code>jQuery</code></li>
           </ul>
 
           </div>
