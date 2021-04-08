@@ -57,21 +57,7 @@ function env($key=''){
 function get_env_file()
 {
 
-
-    if(!$_SERVER['SERVER_NAME']){
-        return ".ENV";
-    }
-
+    return 'config/.ENV';
     
-    switch ($_SERVER['SERVER_NAME']) {
-        
-        case 'staging.mobi-hub.com':
-            return ".ENV";
-            break;
-        
-        default:
-            return ".ENV";
-            break;
-    }
 
 }
