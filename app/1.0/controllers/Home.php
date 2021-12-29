@@ -6,6 +6,6 @@ class Home extends Web_Controller {
 	
 	public function index()
 	{
-		$this->_render('home/index');
+		echo $this->_render('home', array(), true);
 	}
 }

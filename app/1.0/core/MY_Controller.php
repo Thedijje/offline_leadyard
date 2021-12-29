@@ -204,14 +204,6 @@ class Web_Controller extends CI_Controller{
         parent::__construct();
 
         $this->load->database();
-        
-        $this->load->model(
-            array(
-                'login_model'=>'login'
-                )
-            );
-            
-        $this->_user_config =   $this->settings->get_settings();
        
         $this->_config  =   $this->lib->config_list();
         
