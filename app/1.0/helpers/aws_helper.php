@@ -14,10 +14,6 @@
         return $params;
     }
 
-    //		old credentials were not working
-    
-	//   'key' 		=> 'AKIAJFXF66QNWEWTMPGA',
-	//   'secret' 	=> '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',
 
     /**
      * Retrieve list of object from given path on s3 bucket
