@@ -8,4 +8,12 @@ class Home extends Web_Controller {
 	{
 		echo $this->_render('home', array(), true);
 	}
+
+
+	public function qr()
+	{
+		$this->load->library('qr');
+		$text = $_GET['text'] ?? "Hi, QR code is awesome";
+		$this->qr->generate($text);
+	}
 }
