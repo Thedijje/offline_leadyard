@@ -1,11 +1,11 @@
 <div class="login-form">
-    <form action="<?php echo base_url('login/validate')?>" method="post">
+    <form action="<?php echo admin_url('login/validate')?>" method="post">
 
         <div class="top">
-            <img src="<?php echo base_url($config['logo-wide'])?>"
+            <img src="<?php echo base_url($_config['logo-wide'])?>"
                 alt="<?php echo $this->lib->get_settings('sitename')?>" class="icon">
 
-            <h4>Inventory manager's panel</h4>
+            <h4>Admin panel</h4>
         </div>
         <div class="form-area">
 
@@ -22,7 +22,7 @@
             <div class="group">
                 <input type="password" name="password" class="form-control" placeholder="Password" required>
                 <input type="hidden" name="redirect"
-                    value="<?php echo $redirect;?>">
+                    value="<?php echo $redirect ?? '';?>">
                 <i class="fa fa-key"></i>
             </div>
 

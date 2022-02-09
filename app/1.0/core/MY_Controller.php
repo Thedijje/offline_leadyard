@@ -56,7 +56,7 @@ class Admin_Controller extends CI_Controller{
         $this->load->database();
 
             
-        //$this->login->check_admin_login();
+        $this->load->helper('my');
             
         
        
@@ -76,8 +76,25 @@ class Admin_Controller extends CI_Controller{
 
     public function _render($view, $data=array(), $return=false)
     {
+        return $this->_return_view($view, $data, $return);
+
+    }
+
+
+    public function _public_render($view='admin/public', $data=array(), $return=false)
+    {
+        $this->front_view_path  =   'admin/public/';
+
+        return $this->_render($view, $data, $return);
+    }
+
+
+    private function _return_view($view, $data=array(), $return=false)
+    {
+        // Check login here
+
+
         $data['_config']        =   $this->_config;
-        //$data['_user_config']   =   $this->_user_config;
 
         if($return){
             return $this->load->view($this->front_view_path.$view, $data, true);
@@ -89,16 +106,17 @@ class Admin_Controller extends CI_Controller{
         $data['heading']    =   (isset($data['heading']) AND $data['heading']!='') ?? ($this->uri->segment(2)=='index' OR $this->uri->segment(2)=='') ?  ucfirst($data['heading']) : ucfirst($this->uri->segment(1)).' '.ucfirst($this->uri->segment(2));
         $data['title']      =   (isset($data['title'])) ? $data['title'].' - '.$this->uri->segment(1) : $data['heading'].' - '.ucfirst($this->uri->segment(1));
 
-
+       
         $this->load->view($this->front_view_path.'includes/header', $data);
         $this->load->view($this->front_view_path.$view, $data);
         $this->load->view($this->front_view_path.'includes/footer', $data);
-
     }
 
 
 
 }
+
+
 
 
 

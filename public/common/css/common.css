@@ -1,0 +1,42 @@
+.pop_alert {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    background: rgba(0,0,0,0.7);
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+    left: 0;
+    margin: 50px auto;
+    right: 0;
+    max-width: 500px;
+    z-index: 10000;
+    min-width: 320px;
+    border: 1px solid #000;
+    -webkit-transition: width 2s;
+    transition: width 2s;
+}
+@media (min-width:768px) and (max-width:1024px){
+	.role-action{
+        padding: 14px 0px !important;
+        display: flex;
+    }
+    a.toggle_confirm {
+        margin-right: 5px;
+    }
+    td.role-action > .btn {
+        margin-right: 5px;
+    }
+}
+
+
+span.required{
+    color:#f00 !important;
+}
+
+
+span.required::after{
+    content:'*' !important;
+}
+
