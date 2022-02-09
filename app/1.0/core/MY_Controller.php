@@ -55,16 +55,10 @@ class Admin_Controller extends CI_Controller{
         parent::__construct();
         $this->load->database();
 
+            
+        //$this->login->check_admin_login();
+            
         
-        $this->load->model(
-            array(
-                'login_model'=>'login'
-                )
-            );
-            
-        $this->login->check_admin_login();
-            
-        $this->_user_config =   $this->settings->get_settings();
        
         $this->_config  =   $this->lib->config_list();
 
@@ -83,12 +77,14 @@ class Admin_Controller extends CI_Controller{
     public function _render($view, $data=array(), $return=false)
     {
         $data['_config']        =   $this->_config;
-        $data['_user_config']   =   $this->_user_config;
+        //$data['_user_config']   =   $this->_user_config;
 
         if($return){
             return $this->load->view($this->front_view_path.$view, $data, true);
         }
 
+        $data['current_class']  =   $this->router->fetch_class();
+        $data['current_method']  =   $this->router->fetch_method();
         
         $data['heading']    =   (isset($data['heading']) AND $data['heading']!='') ?? ($this->uri->segment(2)=='index' OR $this->uri->segment(2)=='') ?  ucfirst($data['heading']) : ucfirst($this->uri->segment(1)).' '.ucfirst($this->uri->segment(2));
         $data['title']      =   (isset($data['title'])) ? $data['title'].' - '.$this->uri->segment(1) : $data['heading'].' - '.ucfirst($this->uri->segment(1));
